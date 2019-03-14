@@ -65,7 +65,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         //let MNISTModel = try VNCoreMLModel(for: MNISTClassifier().model)
         
         
-        print("Hello")
+        //print("Hello")
         // Create a Core ML Vision request
         let request =  VNCoreMLRequest(model: MNISTModel) { (finishedRequest, err) in
             
@@ -74,7 +74,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             guard let results = finishedRequest.results as? [VNClassificationObservation] else { return }
             
             guard let firstResult = results.first else { return }
-            print(firstResult.identifier)
+            //print(firstResult.identifier)
             
             DispatchQueue.main.async {
                 

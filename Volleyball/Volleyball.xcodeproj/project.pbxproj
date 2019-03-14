@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3304809F223AAE40006D4640 /* MNISTClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3304809E223AAE40006D4640 /* MNISTClassifier.mlmodel */; };
 		3335420F221CD2F700BFFE9C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335420E221CD2F700BFFE9C /* CameraViewController.swift */; };
 		33508833221BA2240059CD06 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33508832221BA2240059CD06 /* CameraController.swift */; };
 		33C22E0B221A283500BC0303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C22E0A221A283500BC0303 /* AppDelegate.swift */; };
@@ -15,7 +16,6 @@
 		33C22E12221A283600BC0303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33C22E11221A283600BC0303 /* Assets.xcassets */; };
 		33C22E15221A283600BC0303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C22E13221A283600BC0303 /* LaunchScreen.storyboard */; };
 		33C22E20221A283600BC0303 /* VolleyballTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C22E1F221A283600BC0303 /* VolleyballTests.swift */; };
-		33E8D35822302C82005C60D4 /* MNISTClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D356222F52D8005C60D4 /* MNISTClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3304809E223AAE40006D4640 /* MNISTClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MNISTClassifier.mlmodel; path = ../../../../../Desktop/School/Masters/networks/MNISTClassifier.mlmodel; sourceTree = "<group>"; };
 		3335420E221CD2F700BFFE9C /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		33508832221BA2240059CD06 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		33C22E07221A283500BC0303 /* Volleyball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volleyball.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,7 +42,6 @@
 		33C22E1B221A283600BC0303 /* VolleyballTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VolleyballTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C22E1F221A283600BC0303 /* VolleyballTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolleyballTests.swift; sourceTree = "<group>"; };
 		33C22E21221A283600BC0303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33E8D356222F52D8005C60D4 /* MNISTClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MNISTClassifier.mlmodel; path = ../../../../Desktop/School/Masters/networks/MNISTClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 				33C22E11221A283600BC0303 /* Assets.xcassets */,
 				33C22E13221A283600BC0303 /* LaunchScreen.storyboard */,
 				33C22E16221A283600BC0303 /* Info.plist */,
-				33E8D356222F52D8005C60D4 /* MNISTClassifier.mlmodel */,
+				3304809E223AAE40006D4640 /* MNISTClassifier.mlmodel */,
 			);
 			path = Volleyball;
 			sourceTree = "<group>";
@@ -206,11 +206,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33E8D35822302C82005C60D4 /* MNISTClassifier.mlmodel in Sources */,
 				33C22E0D221A283500BC0303 /* ViewController.swift in Sources */,
 				3335420F221CD2F700BFFE9C /* CameraViewController.swift in Sources */,
 				33508833221BA2240059CD06 /* CameraController.swift in Sources */,
 				33C22E0B221A283500BC0303 /* AppDelegate.swift in Sources */,
+				3304809F223AAE40006D4640 /* MNISTClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KW7CFTG38R;
 				INFOPLIST_FILE = Volleyball/Info.plist;
@@ -381,6 +382,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Malsan.Volleyball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -390,6 +392,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KW7CFTG38R;
 				INFOPLIST_FILE = Volleyball/Info.plist;
@@ -399,6 +402,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Malsan.Volleyball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
