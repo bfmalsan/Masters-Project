@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3u-VA-OZV">
-                                <rect key="frame" x="0.0" y="167" width="375" height="60"/>
+                                <rect key="frame" x="8" y="169" width="358" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="muP-PZ-MkN"/>
                                 </constraints>
@@ -34,9 +34,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPs-tc-q3e">
-                                <rect key="frame" x="138" y="268" width="99" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPs-tc-q3e">
+                                <rect key="frame" x="146" y="251" width="82" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
@@ -46,9 +45,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="X3u-VA-OZV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0QZ-fH-k48"/>
-                            <constraint firstItem="X3u-VA-OZV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="2os-7h-FNS"/>
-                            <constraint firstAttribute="trailing" secondItem="X3u-VA-OZV" secondAttribute="trailing" id="6uI-Wi-f9D"/>
+                            <constraint firstItem="aPs-tc-q3e" firstAttribute="top" secondItem="X3u-VA-OZV" secondAttribute="bottom" constant="22" id="065-Nm-I6x"/>
+                            <constraint firstItem="X3u-VA-OZV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="0QZ-fH-k48"/>
+                            <constraint firstItem="X3u-VA-OZV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="125" id="2os-7h-FNS"/>
+                            <constraint firstItem="aPs-tc-q3e" firstAttribute="centerX" secondItem="X3u-VA-OZV" secondAttribute="centerX" id="nCW-5s-0z5"/>
+                            <constraint firstItem="aPs-tc-q3e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="zuV-JH-dNc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -65,34 +66,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FKt-Kr-phv">
-                                <rect key="frame" x="0.0" y="88" width="375" height="680"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DL1-Z7-ynh">
+                                <rect key="frame" x="270" y="44" width="105" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="FKt-Kr-phv" secondAttribute="height" multiplier="75:136" id="bTa-NE-KE5"/>
+                                    <constraint firstAttribute="height" constant="54" id="Zeu-MY-jrp"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DL1-Z7-ynh">
-                                <rect key="frame" x="282" y="15" width="93" height="80"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FKt-Kr-phv" firstAttribute="top" secondItem="MRj-Oe-IzY" secondAttribute="top" id="Boj-o4-x4I"/>
-                            <constraint firstItem="MRj-Oe-IzY" firstAttribute="bottom" secondItem="DL1-Z7-ynh" secondAttribute="bottom" constant="698" id="Cpz-tu-cPa"/>
-                            <constraint firstItem="MRj-Oe-IzY" firstAttribute="bottom" secondItem="FKt-Kr-phv" secondAttribute="bottom" constant="54" id="JBo-xG-9NX"/>
-                            <constraint firstItem="DL1-Z7-ynh" firstAttribute="top" secondItem="JbA-ar-lQJ" secondAttribute="top" id="N4h-kd-nji"/>
-                            <constraint firstItem="DL1-Z7-ynh" firstAttribute="leading" secondItem="MRj-Oe-IzY" secondAttribute="leading" constant="282" id="Pab-5u-9hz"/>
-                            <constraint firstItem="FKt-Kr-phv" firstAttribute="trailing" secondItem="MRj-Oe-IzY" secondAttribute="trailing" id="WV2-yM-59H"/>
-                            <constraint firstItem="DL1-Z7-ynh" firstAttribute="trailing" secondItem="MRj-Oe-IzY" secondAttribute="trailing" id="gyQ-at-tJ4"/>
-                            <constraint firstItem="FKt-Kr-phv" firstAttribute="leading" secondItem="MRj-Oe-IzY" secondAttribute="leading" id="naJ-FN-PA0"/>
+                            <constraint firstItem="DL1-Z7-ynh" firstAttribute="leading" secondItem="MRj-Oe-IzY" secondAttribute="leading" constant="270" id="SjW-kr-1Pn"/>
+                            <constraint firstItem="DL1-Z7-ynh" firstAttribute="top" secondItem="MRj-Oe-IzY" secondAttribute="top" id="T3P-K7-Zm8"/>
+                            <constraint firstAttribute="trailing" secondItem="DL1-Z7-ynh" secondAttribute="trailing" id="UXG-F1-VFK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MRj-Oe-IzY"/>
                     </view>
                     <connections>
-                        <outlet property="capturePreviewView" destination="FKt-Kr-phv" id="Hez-T3-H5g"/>
                         <outlet property="numberLabel" destination="DL1-Z7-ynh" id="c2K-FH-lg3"/>
                     </connections>
                 </viewController>
