@@ -113,7 +113,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     func setUpCamera() {
         videoCapture = VideoCapture()
         videoCapture.delegate = self
-        videoCapture.desiredFrameRate = 240
+        videoCapture.desiredFrameRate = 30
         videoCapture.setUp(sessionPreset: AVCaptureSession.Preset.hd1920x1080) { success in
             if success {
                 // Add the video preview into the UI.

@@ -22,23 +22,24 @@ class YOLO {
 
   public init() { }
 
-  public func predict(image: CVPixelBuffer) throws -> [Prediction]? {
-    if let output = try? model.prediction(image: image) {
-        return computeBoundingBoxes(features: output.output1)
-    } else {
-      return nil
-    }
-  }
+  //public func predict(image: CVPixelBuffer) throws -> [Prediction]? {
+ //   if let output = try? model.prediction(image: image) {
+ //       return computeBoundingBoxes(features: output.output1)
+ //   } else {
+ //     return nil
+  //  }
+ // }
 
     public func computeBoundingBoxes(features: MLMultiArray) -> [Prediction] {
     assert(features.count == 24*13*13)
 
+        
     var predictions = [Prediction]()
 
     let blockSize: Float = 32
     let gridHeight = 13
     let gridWidth = 13
-    let boxesPerCell = 5
+    let boxesPerCell = 6
     let numClasses = 3
 
     // The 416x416 image is divided into a 13x13 grid. Each of these grid cells
@@ -71,21 +72,23 @@ class YOLO {
           let channel = b*(numClasses + 5)
 
           // The slow way:
-          /*
+          
           let tx = features[[channel    , cy, cx] as [NSNumber]].floatValue
           let ty = features[[channel + 1, cy, cx] as [NSNumber]].floatValue
           let tw = features[[channel + 2, cy, cx] as [NSNumber]].floatValue
           let th = features[[channel + 3, cy, cx] as [NSNumber]].floatValue
           let tc = features[[channel + 4, cy, cx] as [NSNumber]].floatValue
-          */
+ 
 
           // The fast way:
+          /*
           let tx = Float(featurePointer[offset(channel    , cx, cy)])
           let ty = Float(featurePointer[offset(channel + 1, cx, cy)])
           let tw = Float(featurePointer[offset(channel + 2, cx, cy)])
           let th = Float(featurePointer[offset(channel + 3, cx, cy)])
           let tc = Float(featurePointer[offset(channel + 4, cx, cy)])
-
+          */
+ 
           // The predicted tx and ty coordinates are relative to the location
           // of the grid cell; we use the logistic sigmoid to constrain these
           // coordinates to the range 0 - 1. Then we add the cell coordinates
