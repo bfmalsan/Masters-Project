@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		3304809F223AAE40006D4640 /* MNISTClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3304809E223AAE40006D4640 /* MNISTClassifier.mlmodel */; };
 		3335420F221CD2F700BFFE9C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335420E221CD2F700BFFE9C /* CameraViewController.swift */; };
-		33508833221BA2240059CD06 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33508832221BA2240059CD06 /* CameraController.swift */; };
+		33947FE62276B2BB00D4C7AB /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33947FE52276B2BB00D4C7AB /* VideoCapture.swift */; };
+		33947FE82276B80400D4C7AB /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33947FE72276B80400D4C7AB /* BoundingBox.swift */; };
+		33947FEA2276B8A700D4C7AB /* YOLO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33947FE92276B8A700D4C7AB /* YOLO.swift */; };
+		33947FEC2276BB2600D4C7AB /* GoodVolleyball.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 33947FEB2276BB2600D4C7AB /* GoodVolleyball.mlmodel */; };
+		33947FEE2276BB4500D4C7AB /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33947FED2276BB4500D4C7AB /* Helpers.swift */; };
 		33C22E0B221A283500BC0303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C22E0A221A283500BC0303 /* AppDelegate.swift */; };
 		33C22E0D221A283500BC0303 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C22E0C221A283500BC0303 /* ViewController.swift */; };
 		33C22E10221A283500BC0303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C22E0E221A283500BC0303 /* Main.storyboard */; };
@@ -31,7 +35,11 @@
 /* Begin PBXFileReference section */
 		3304809E223AAE40006D4640 /* MNISTClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MNISTClassifier.mlmodel; path = ../../../../../Desktop/School/Masters/networks/MNISTClassifier.mlmodel; sourceTree = "<group>"; };
 		3335420E221CD2F700BFFE9C /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		33508832221BA2240059CD06 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		33947FE52276B2BB00D4C7AB /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		33947FE72276B80400D4C7AB /* BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		33947FE92276B8A700D4C7AB /* YOLO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YOLO.swift; sourceTree = "<group>"; };
+		33947FEB2276BB2600D4C7AB /* GoodVolleyball.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoodVolleyball.mlmodel; sourceTree = "<group>"; };
+		33947FED2276BB4500D4C7AB /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		33C22E07221A283500BC0303 /* Volleyball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volleyball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C22E0A221A283500BC0303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33C22E0C221A283500BC0303 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,13 +92,17 @@
 			isa = PBXGroup;
 			children = (
 				33C22E0A221A283500BC0303 /* AppDelegate.swift */,
+				33947FE72276B80400D4C7AB /* BoundingBox.swift */,
 				33C22E0C221A283500BC0303 /* ViewController.swift */,
-				33508832221BA2240059CD06 /* CameraController.swift */,
 				3335420E221CD2F700BFFE9C /* CameraViewController.swift */,
+				33947FE52276B2BB00D4C7AB /* VideoCapture.swift */,
+				33947FED2276BB4500D4C7AB /* Helpers.swift */,
+				33947FE92276B8A700D4C7AB /* YOLO.swift */,
 				33C22E0E221A283500BC0303 /* Main.storyboard */,
 				33C22E11221A283600BC0303 /* Assets.xcassets */,
 				33C22E13221A283600BC0303 /* LaunchScreen.storyboard */,
 				33C22E16221A283600BC0303 /* Info.plist */,
+				33947FEB2276BB2600D4C7AB /* GoodVolleyball.mlmodel */,
 				3304809E223AAE40006D4640 /* MNISTClassifier.mlmodel */,
 			);
 			path = Volleyball;
@@ -155,9 +167,11 @@
 				TargetAttributes = {
 					33C22E06221A283500BC0303 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					33C22E1A221A283600BC0303 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 33C22E06221A283500BC0303;
 					};
 				};
@@ -207,9 +221,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C22E0D221A283500BC0303 /* ViewController.swift in Sources */,
+				33947FE62276B2BB00D4C7AB /* VideoCapture.swift in Sources */,
 				3335420F221CD2F700BFFE9C /* CameraViewController.swift in Sources */,
-				33508833221BA2240059CD06 /* CameraController.swift in Sources */,
+				33947FE82276B80400D4C7AB /* BoundingBox.swift in Sources */,
+				33947FEE2276BB4500D4C7AB /* Helpers.swift in Sources */,
 				33C22E0B221A283500BC0303 /* AppDelegate.swift in Sources */,
+				33947FEC2276BB2600D4C7AB /* GoodVolleyball.mlmodel in Sources */,
+				33947FEA2276B8A700D4C7AB /* YOLO.swift in Sources */,
 				3304809F223AAE40006D4640 /* MNISTClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +401,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Malsan.Volleyball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -403,7 +421,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Malsan.Volleyball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -423,7 +441,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Malsan.VolleyballTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Volleyball.app/Volleyball";
 			};
@@ -444,7 +462,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Malsan.VolleyballTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Volleyball.app/Volleyball";
 			};

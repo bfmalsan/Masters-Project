@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Volleyball" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3u-VA-OZV">
-                                <rect key="frame" x="8" y="169" width="358" height="60"/>
+                                <rect key="frame" x="8" y="125" width="446" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="muP-PZ-MkN"/>
                                 </constraints>
@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPs-tc-q3e">
-                                <rect key="frame" x="146" y="251" width="82" height="41"/>
+                                <rect key="frame" x="190" y="207" width="82" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
@@ -62,30 +62,46 @@
         <scene sceneID="a5y-o7-U4b">
             <objects>
                 <viewController id="iFa-sg-IiP" customClass="CameraViewController" customModule="Volleyball" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JbA-ar-lQJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="sAx-Xa-axv">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DL1-Z7-ynh">
-                                <rect key="frame" x="270" y="44" width="105" height="54"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="Zeu-MY-jrp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0G-S5-zII" userLabel="Video Preview">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVH-YR-LBs">
+                                <rect key="frame" x="0.0" y="0.0" width="416" height="416"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C7b-WF-r42" userLabel="Results">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Elapsed time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgG-Ym-zpu">
+                                        <rect key="frame" x="20" y="10" width="335" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DL1-Z7-ynh" firstAttribute="leading" secondItem="MRj-Oe-IzY" secondAttribute="leading" constant="270" id="SjW-kr-1Pn"/>
-                            <constraint firstItem="DL1-Z7-ynh" firstAttribute="top" secondItem="MRj-Oe-IzY" secondAttribute="top" id="T3P-K7-Zm8"/>
-                            <constraint firstAttribute="trailing" secondItem="DL1-Z7-ynh" secondAttribute="trailing" id="UXG-F1-VFK"/>
+                            <constraint firstAttribute="trailing" secondItem="z0G-S5-zII" secondAttribute="trailing" id="A2H-aB-sKF"/>
+                            <constraint firstAttribute="bottom" secondItem="z0G-S5-zII" secondAttribute="bottom" id="IFa-nP-QwX"/>
+                            <constraint firstItem="z0G-S5-zII" firstAttribute="top" secondItem="9cD-RR-A7N" secondAttribute="top" id="kEu-jU-SXe"/>
+                            <constraint firstItem="z0G-S5-zII" firstAttribute="leading" secondItem="sAx-Xa-axv" secondAttribute="leading" id="lf1-Sf-pX2"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="MRj-Oe-IzY"/>
+                        <viewLayoutGuide key="safeArea" id="9cD-RR-A7N"/>
                     </view>
                     <connections>
-                        <outlet property="numberLabel" destination="DL1-Z7-ynh" id="c2K-FH-lg3"/>
+                        <outlet property="debugImageView" destination="rVH-YR-LBs" id="5UN-nP-aZM"/>
+                        <outlet property="timeLabel" destination="EgG-Ym-zpu" id="aIk-gR-OdW"/>
+                        <outlet property="videoPreview" destination="z0G-S5-zII" id="U8n-wC-khN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZv-6w-n5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
