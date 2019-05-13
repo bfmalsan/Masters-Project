@@ -1,0 +1,6 @@
+C:/Users/bfmal/Desktop/darknet-master/newbuild/CMakeFiles/darklib.dir
+C:/Users/bfmal/Desktop/darknet-master/newbuild/CMakeFiles/uselib.dir
+C:/Users/bfmal/Desktop/darknet-master/newbuild/CMakeFiles/INSTALL.dir
+C:/Users/bfmal/Desktop/darknet-master/newbuild/CMakeFiles/darknet.dir
+C:/Users/bfmal/Desktop/darknet-master/newbuild/CMakeFiles/ALL_BUILD.dir
+C:/Users/bfmal/Desktop/darknet-master/newbuild/CMakeFiles/ZERO_CHECK.dir

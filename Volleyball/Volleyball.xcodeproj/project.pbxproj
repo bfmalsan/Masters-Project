@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		3304809F223AAE40006D4640 /* MNISTClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3304809E223AAE40006D4640 /* MNISTClassifier.mlmodel */; };
 		3335420F221CD2F700BFFE9C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335420E221CD2F700BFFE9C /* CameraViewController.swift */; };
+		3380A9A4228A036D001FE29C /* myyolo9000.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3380A9A3228A036D001FE29C /* myyolo9000.mlmodel */; };
+		3380A9A6228A03DE001FE29C /* myyolov3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3380A9A5228A03DE001FE29C /* myyolov3.mlmodel */; };
 		33947FE62276B2BB00D4C7AB /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33947FE52276B2BB00D4C7AB /* VideoCapture.swift */; };
 		33947FE82276B80400D4C7AB /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33947FE72276B80400D4C7AB /* BoundingBox.swift */; };
 		33947FEA2276B8A700D4C7AB /* YOLO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33947FE92276B8A700D4C7AB /* YOLO.swift */; };
-		33947FEC2276BB2600D4C7AB /* GoodVolleyball.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 33947FEB2276BB2600D4C7AB /* GoodVolleyball.mlmodel */; };
 		33947FEE2276BB4500D4C7AB /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33947FED2276BB4500D4C7AB /* Helpers.swift */; };
 		339D9E3B227B56DC00459630 /* TinyYOLO.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 339D9E3A227B56DC00459630 /* TinyYOLO.mlmodel */; };
 		33C22E0B221A283500BC0303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C22E0A221A283500BC0303 /* AppDelegate.swift */; };
@@ -36,10 +37,11 @@
 /* Begin PBXFileReference section */
 		3304809E223AAE40006D4640 /* MNISTClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MNISTClassifier.mlmodel; path = ../../../../../Desktop/School/Masters/networks/MNISTClassifier.mlmodel; sourceTree = "<group>"; };
 		3335420E221CD2F700BFFE9C /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		3380A9A3228A036D001FE29C /* myyolo9000.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = myyolo9000.mlmodel; path = ../../models/yolo9000/myyolo9000.mlmodel; sourceTree = "<group>"; };
+		3380A9A5228A03DE001FE29C /* myyolov3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = myyolov3.mlmodel; path = ../../models/yolov3/myyolov3.mlmodel; sourceTree = "<group>"; };
 		33947FE52276B2BB00D4C7AB /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		33947FE72276B80400D4C7AB /* BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
 		33947FE92276B8A700D4C7AB /* YOLO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YOLO.swift; sourceTree = "<group>"; };
-		33947FEB2276BB2600D4C7AB /* GoodVolleyball.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoodVolleyball.mlmodel; sourceTree = "<group>"; };
 		33947FED2276BB4500D4C7AB /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		339D9E3A227B56DC00459630 /* TinyYOLO.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TinyYOLO.mlmodel; sourceTree = "<group>"; };
 		33C22E07221A283500BC0303 /* Volleyball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volleyball.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,8 +106,9 @@
 				33C22E11221A283600BC0303 /* Assets.xcassets */,
 				33C22E13221A283600BC0303 /* LaunchScreen.storyboard */,
 				33C22E16221A283600BC0303 /* Info.plist */,
+				3380A9A5228A03DE001FE29C /* myyolov3.mlmodel */,
 				339D9E3A227B56DC00459630 /* TinyYOLO.mlmodel */,
-				33947FEB2276BB2600D4C7AB /* GoodVolleyball.mlmodel */,
+				3380A9A3228A036D001FE29C /* myyolo9000.mlmodel */,
 				3304809E223AAE40006D4640 /* MNISTClassifier.mlmodel */,
 			);
 			path = Volleyball;
@@ -227,12 +230,13 @@
 				339D9E3B227B56DC00459630 /* TinyYOLO.mlmodel in Sources */,
 				33947FE62276B2BB00D4C7AB /* VideoCapture.swift in Sources */,
 				3335420F221CD2F700BFFE9C /* CameraViewController.swift in Sources */,
+				3380A9A4228A036D001FE29C /* myyolo9000.mlmodel in Sources */,
 				33947FE82276B80400D4C7AB /* BoundingBox.swift in Sources */,
 				33947FEE2276BB4500D4C7AB /* Helpers.swift in Sources */,
 				33C22E0B221A283500BC0303 /* AppDelegate.swift in Sources */,
-				33947FEC2276BB2600D4C7AB /* GoodVolleyball.mlmodel in Sources */,
 				33947FEA2276B8A700D4C7AB /* YOLO.swift in Sources */,
 				3304809F223AAE40006D4640 /* MNISTClassifier.mlmodel in Sources */,
+				3380A9A6228A03DE001FE29C /* myyolov3.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

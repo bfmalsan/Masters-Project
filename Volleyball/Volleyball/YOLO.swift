@@ -9,8 +9,8 @@ class YOLO {
     
    
   // Tweak these values to get more or fewer predictions.
-  let confidenceThreshold: Float = 0.2
-  let iouThreshold: Float = 0.5
+  let confidenceThreshold: Float = 0.1
+  let iouThreshold: Float = 0.6
 
   struct Prediction {
     let classIndex: Int
@@ -18,7 +18,7 @@ class YOLO {
     let rect: CGRect
   }
 
-  let model = GoodVolleyball()
+  let model = myyolo9000()
 
   public init() { }
 
@@ -31,7 +31,7 @@ class YOLO {
  // }
 
     public func computeBoundingBoxes(features: MLMultiArray) -> [Prediction] {
-    assert(features.count == 24*13*13)
+    assert(features.count == 40*13*13)
 
         
     var predictions = [Prediction]()
@@ -39,7 +39,7 @@ class YOLO {
     let blockSize: Float = 32
     let gridHeight = 13
     let gridWidth = 13
-    let boxesPerCell = 6
+    let boxesPerCell = 5
     let numClasses = 3
 
     // The 416x416 image is divided into a 13x13 grid. Each of these grid cells

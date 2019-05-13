@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3u-VA-OZV">
-                                <rect key="frame" x="8" y="125" width="446" height="60"/>
+                                <rect key="frame" x="183" y="56" width="446" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="muP-PZ-MkN"/>
+                                    <constraint firstAttribute="height" constant="60" id="bf6-1R-xub"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Volleyball App">
@@ -34,29 +34,28 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPs-tc-q3e">
-                                <rect key="frame" x="190" y="207" width="82" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Camera"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW5-h4-f9w">
+                                <rect key="frame" x="358" y="157" width="96" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Start"/>
                                 <connections>
-                                    <segue destination="iFa-sg-IiP" kind="show" id="449-d9-xDm"/>
+                                    <segue destination="iFa-sg-IiP" kind="show" id="Lni-PS-ccq"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="aPs-tc-q3e" firstAttribute="top" secondItem="X3u-VA-OZV" secondAttribute="bottom" constant="22" id="065-Nm-I6x"/>
-                            <constraint firstItem="X3u-VA-OZV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="0QZ-fH-k48"/>
-                            <constraint firstItem="X3u-VA-OZV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="125" id="2os-7h-FNS"/>
-                            <constraint firstItem="aPs-tc-q3e" firstAttribute="centerX" secondItem="X3u-VA-OZV" secondAttribute="centerX" id="nCW-5s-0z5"/>
-                            <constraint firstItem="aPs-tc-q3e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="zuV-JH-dNc"/>
+                            <constraint firstItem="X3u-VA-OZV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vf8-ie-QaA"/>
+                            <constraint firstItem="X3u-VA-OZV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="exJ-7B-SNX"/>
+                            <constraint firstItem="X3u-VA-OZV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="gRM-mO-OCe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="477.60000000000002" y="-1.4778325123152709"/>
+            <point key="canvasLocation" x="471.42857142857144" y="-4"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="a5y-o7-U4b">

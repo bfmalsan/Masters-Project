@@ -1,0 +1,15 @@
+data/obj/00000_frame_3.jpg
+data/obj/00000_frame_6.jpg
+data/obj/00000_frame_13.jpg
+data/obj/00000_frame_18.jpg
+data/obj/00000_frame_21.jpg
+data/obj/00000_frame_22.jpg
+data/obj/00000_frame_25.jpg
+data/obj/00000_frame_35.jpg
+data/obj/00000_frame_41.jpg
+data/obj/00000_frame_45.jpg
+data/obj/00000_frame_55.jpg
+data/obj/00000_frame_59.jpg
+data/obj/00000_frame_60.jpg
+data/obj/00000_frame_61.jpg
+data/obj/00000_frame_71.jpg

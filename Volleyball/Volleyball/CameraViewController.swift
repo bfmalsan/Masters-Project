@@ -47,6 +47,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     var inflightBuffer = 0
     let semaphore = DispatchSemaphore(value: CameraViewController.maxInflightBuffers)
     
+    let drawTrajectory = 0
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         
@@ -54,6 +56,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         setUpCoreImage()
         setUpVision()
         setUpCamera()
+       
        
         drawLine()
     }
@@ -152,9 +155,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         // predict() can be called on the next frame while the previous one is
         // still being processed. Hence the need to queue up the start times.
         startTimes.append(CACurrentMediaTime())
-        
-        
-        
+    
         // Vision will automatically resize the input image.
         
         let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer)
@@ -262,16 +263,46 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
 
     func drawLine(){
-        //Create start, end and control points
-        let startPoint = CGPoint(x:self.view.frame.size.width/2, y:self.view.frame.size.height/2)
-        let endPoint   = CGPoint(x:0, y:self.view.frame.size.height/2)
-        let controlPoint = CGPoint(x:self.view.frame.size.width/4, y:0)
+        let path: UIBezierPath = UIBezierPath()
         
-        // create quatratic curve
-        let path: UIBezierPath = UIBezierPath();
-        path.move(to: startPoint)
-        path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
+        //Draw a outside set
+        if(drawTrajectory == 0){
+            //Create start, end and control points
+            let startPoint = CGPoint(x:self.view.frame.size.width/2, y:self.view.frame.size.height/2)
+            let endPoint   = CGPoint(x:0, y:self.view.frame.size.height/2)
+            let controlPoint = CGPoint(x:self.view.frame.size.width/4, y:0)
+            
+            // create quatratic curve
+           
+            path.move(to: startPoint)
+            path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
+        }
         
+        //Draw a middle set
+        if(drawTrajectory == 1){
+            //Create start, end and control points
+            let startPoint = CGPoint(x:self.view.frame.size.width/2, y:self.view.frame.size.height/2)
+            let endPoint   = CGPoint(x:(self.view.frame.size.width/2) - 50, y:self.view.frame.size.height/2)
+            let controlPoint = CGPoint(x:(self.view.frame.size.width/2) - 25, y:0)
+            
+            // create quatratic curve
+            
+            path.move(to: startPoint)
+            path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
+        }
+        
+        //Draw a right side set
+        if(drawTrajectory == 2){
+            //Create start, end and control points
+            let startPoint = CGPoint(x:self.view.frame.size.width/2, y:self.view.frame.size.height/2)
+            let endPoint   = CGPoint(x:self.view.frame.size.width, y:self.view.frame.size.height/2)
+            let controlPoint = CGPoint(x: self.view.frame.size.width - (self.view.frame.size.width/4), y:0)
+            
+            // create quatratic curve
+            
+            path.move(to: startPoint)
+            path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
+        }
         //Show curve
         let layer = CAShapeLayer()
         layer.fillColor = UIColor.clear.cgColor
